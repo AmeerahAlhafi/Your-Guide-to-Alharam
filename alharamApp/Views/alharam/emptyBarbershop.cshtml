@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "emptyBarbershop";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+
+<main id="main" data-aos="fade-in">
+
+
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+
+            @using (Html.BeginForm("searchSomeBarbershop", "alharam", FormMethod.Post))
+            {
+
+                @Html.TextBox("txtBoxSearch");
+                <i class="bi bi-search"></i>
+                <input type="submit" value="Search" class="btn btn-primary" />
+            }
+
+
+            <section id="courses" class="courses">
+                <div class="container" data-aos="fade-up">
+
+                    <h5 style="color:lightslategray">No results were found matching your search</h5>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+

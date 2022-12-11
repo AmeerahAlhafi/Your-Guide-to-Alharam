@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="alharamDBModel1StoreContainer" CdmEntityContainer="alharamDBFacilities">
+    <EntitySetMapping Name="barbershops">
+      <EntityTypeMapping TypeName="alharamDBModel1.barbershop">
+        <MappingFragment StoreEntitySet="barbershop">
+          <ScalarProperty Name="barbershopID" ColumnName="barbershopID" />
+          <ScalarProperty Name="barbershopName" ColumnName="barbershopName" />
+          <ScalarProperty Name="barbershopLocation" ColumnName="barbershopLocation" />
+          <ScalarProperty Name="barbershopImg" ColumnName="barbershopImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hotels">
+      <EntityTypeMapping TypeName="alharamDBModel1.hotel">
+        <MappingFragment StoreEntitySet="hotel">
+          <ScalarProperty Name="hotelID" ColumnName="hotelID" />
+          <ScalarProperty Name="hotelName" ColumnName="hotelName" />
+          <ScalarProperty Name="hotelLocation" ColumnName="hotelLocation" />
+          <ScalarProperty Name="hotelImg" ColumnName="hotelImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restaurants">
+      <EntityTypeMapping TypeName="alharamDBModel1.restaurant">
+        <MappingFragment StoreEntitySet="restaurant">
+          <ScalarProperty Name="restaurantID" ColumnName="restaurantID" />
+          <ScalarProperty Name="restaurantName" ColumnName="restaurantName" />
+          <ScalarProperty Name="restaurantLocation" ColumnName="restaurantLocation" />
+          <ScalarProperty Name="restaurantImg" ColumnName="restaurantImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

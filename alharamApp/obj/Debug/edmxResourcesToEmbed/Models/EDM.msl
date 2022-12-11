@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="alharamDBModelStoreContainer" CdmEntityContainer="alharamDBEntities">
+    <EntitySetMapping Name="allUsers">
+      <EntityTypeMapping TypeName="alharamDBModel.allUser">
+        <MappingFragment StoreEntitySet="allUser">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="roles">
+      <EntityTypeMapping TypeName="alharamDBModel.role">
+        <MappingFragment StoreEntitySet="role">
+          <ScalarProperty Name="roleID" ColumnName="roleID" />
+          <ScalarProperty Name="roleName" ColumnName="roleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+<main id="main">
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+            <!-- ======= choice Section ======= -->
+            <section id="features" class="features">
+                <div class="container" data-aos="fade-up">
+
+                    <br />
+                    <h3 style="color : gray">Which service you want to manage ?</h3><br />
+
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+
+
+                        <div class="col-lg-4 col-md-4">
+                            <div class="icon-box">
+                                <i class="bi bi-building" style="color:darkslateblue;"></i>
+                                <h3><a href="@Url.Action("hotelManagement", "account")">Hotels</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box">
+                                <i class="bi bi-egg-fried" style="color: #ffbb2c;"></i>
+                                <h3><a href="">Restaurants</a></h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 mt-4 mt-md-0">
+                            <div class="icon-box">
+                                <i class="bi bi-scissors" style="color:darkred;"></i>
+                                <h3><a href="">Barbershops</a></h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section><!-- End Choice service Section -->
+
+        </div>
+    </div>
+    </main>

@@ -1,0 +1,86 @@
+﻿@model List<alharamApp.Models.facilitie>
+
+@{
+    ViewBag.Title = "showAllBarbershop";
+    Layout = "~/Views/Shared/_alharamLayout.cshtml";
+}
+
+@{
+    bool isLoggedIn = true;
+    if (string.IsNullOrWhiteSpace(User.Identity.Name))
+    //the privous condition is method which terurn the name of the user currently loggedin
+    {
+        isLoggedIn = false;
+    }
+
+}
+<main id="main" data-aos="fade-in">
+
+    <!-- ======= search about specific failites ======= -->
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" style="background-color:white">
+        <div class="container">
+
+
+            @using (Html.BeginForm("searchSomeBarbershop", "alharam", FormMethod.Post))
+            {
+
+                @Html.TextBox("txtBoxSearch");
+                <i class="bi bi-search"></i>
+                <input type="submit" value="Search" class="btn btn-primary" />
+            }
+
+
+            @*</div>
+                </div>*@
+            <!-- End Breadcrumbs -->
+            <!-- ======= Facilities Card Section ======= -->
+
+            <section id="courses" class="courses">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                                <div class="course-item h-100">
+
+                                    <img src="~/@item.image" class="img-fluid" alt="One of makkah facilities">
+                                    <div class="course-content">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                        </div>
+
+                                        <h3><a href=@item.location>@Html.DisplayFor(i => item.name)</a> <i class="bi bi-geo-alt"></i></h3>
+
+                                        <div class="trainer d-flex justify-content-between align-items-center">
+                                            @if (!isLoggedIn)
+                                            {
+
+                                                <div class="trainer-profile d-flex align-items-center">
+                                                    <a class="btn btn-primary" href="@Url.Action("loginForm", "account")" role="button">Add to favorites <i class="bi bi-heart-fill" style="color:red"></i> </a>
+                                                </div>
+                                            }
+
+                                            else
+                                            {
+
+                                                <div class="trainer-profile d-flex align-items-center">
+                                                    <a class="btn btn-primary" href="@Url.Action("showAllBarbershop", "alharam")" role="button">Add to favorites <i class="bi bi-heart-fill" style="color:red"></i> </a>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+               
+
+                    }
+
+                    </div>
+            </div>
+            </section><!-- End Courses Section -->
+
+
+        </div>
+        </div>
+    </main><!-- End #main -->

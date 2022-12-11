@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="alharamDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="barbershop">
+    <Key>
+      <PropertyRef Name="barbershopID" />
+    </Key>
+    <Property Name="barbershopID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="barbershopName" Type="nvarchar" MaxLength="60" />
+    <Property Name="barbershopLocation" Type="nvarchar" MaxLength="300" />
+    <Property Name="barbershopImg" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="hotel">
+    <Key>
+      <PropertyRef Name="hotelID" />
+    </Key>
+    <Property Name="hotelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hotelName" Type="nvarchar" MaxLength="60" />
+    <Property Name="hotelLocation" Type="nvarchar" MaxLength="300" />
+    <Property Name="hotelImg" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="restaurant">
+    <Key>
+      <PropertyRef Name="restaurantID" />
+    </Key>
+    <Property Name="restaurantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="restaurantName" Type="nvarchar" MaxLength="60" />
+    <Property Name="restaurantLocation" Type="nvarchar" MaxLength="300" />
+    <Property Name="restaurantImg" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="alharamDBModel1StoreContainer">
+    <EntitySet Name="barbershop" EntityType="Self.barbershop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hotel" EntityType="Self.hotel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="restaurant" EntityType="Self.restaurant" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
